@@ -1,0 +1,20 @@
+inherit lua
+
+DESCRIPTION="Lua socket requires/response server dispatcher"
+HOMEPAGE="http://www.keplerproject.org/copas/"
+SRC_URI="http://luaforge.net/frs/download.php/2559/${PN#*-}-${PV}.tar.gz"
+SRC_DIR="${PN#*-}-${PV}"
+
+src_compile() { :; }
+
+src_test() {
+	cd ${S}/src/copas
+	${LUA} ${S}/tests/test.lua
+}
+
+src_install() {
+	cd ${S}
+	cyginstall LUA_DIR=${D}${LUA_SCRIPTDIR}
+}
+
+HTMLDOCS="doc/us/*"

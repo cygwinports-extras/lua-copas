@@ -1,0 +1,10 @@
+category: Lua Net
+requires: lua lua-socket
+sdesc: "Lua Coroutine Oriented Portable Asynchronous Services library"
+ldesc: "Copas is a dispatcher based on coroutines that can be used by 
+TCP/IP servers. It uses LuaSocket as the interface with the TCP/IP 
+stack.
+
+A server registered with Copas should provide a handler for requests and 
+use Copas socket functions to send the response. Copas loops through 
+requests and invokes the corresponding handlers."
